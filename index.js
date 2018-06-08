@@ -4,7 +4,7 @@ const util = require('util');
 var multer = require('multer');
 var upload = multer();
 var app = express();
-var port= 3000;
+var port= process.env.PORT;
 var mymessages=require('./messages.js')
 app.use(express.static(__dirname+"/views"));
 //var mongoose = require('mongoose');
