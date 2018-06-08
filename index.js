@@ -4,6 +4,7 @@ const util = require('util');
 var multer = require('multer');
 var upload = multer();
 var app = express();
+var port= 3000;
 var mymessages=require('./messages.js')
 app.use(express.static(__dirname+"/views"));
 //var mongoose = require('mongoose');
@@ -36,4 +37,4 @@ app.get('/inbox',(req,res)=>{
 response.sendStatus(200);
 });
   //app.get('/register',(req,res) =>res.send(JSON.stringify(req.body.from+req.body.text, null, 4)))
-app.listen(3080);
+app.listen(port);
